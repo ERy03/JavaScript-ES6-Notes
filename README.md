@@ -31,10 +31,11 @@ const { name, club, address: {city} } = player;
 // player.address.city
 ```
 
-This allows us to access what's inside the object in a simpler manner
+This allows us to access the object key's values in a simpler manner
 
 ``` javascript
 console.log(name) // Lebron James
 console.log(club) // LA Lakers
 console.log(city) // Los Angeles
 ```
+<hr>
