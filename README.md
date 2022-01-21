@@ -386,9 +386,37 @@ let cat = new Cat('cat', 4)
 cat.makeNoise() // meow
 console.log(cat.metaData) // Type: Cat, Legs: 4
 ```
-``` javascript
+<hr>
 
+### Promises
+
+Used on network requests such as fetching from API or asynchronous functions.
+
+``` javascript
+const buyFlightTicket = () => {
+  return new Promise( (resolved, reject) => {
+    setTimeout( () => {
+      const error = false;
+
+      if(error) {
+          reject("Sorry your payment was not successful") {
+        } else {
+          resolve("Thank you, your payment was successful")
+        }
+      }
+    }, 3000)
+  })
+}
+
+buyFlightTicket()
+.then( (success) => console.log(success)) // success -> resolve: "Thank you, your payment was successful"
+.catch( (error) => console.log(error)); // error -> reject: "Sorry your payment was not successful"
+
+// after 3 seconds => Thank you, your payment was successful
 ```
+<hr>
+
+###
 ``` javascript
 
 ```
