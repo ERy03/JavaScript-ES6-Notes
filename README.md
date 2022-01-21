@@ -241,7 +241,7 @@ console.log( dinnerMenu("grilled steak") )
 ```
 
 With arrow functions, if it only has one paramater and one thing to return:
-we can ommit the return and the parenthesis around the parameter
+we can ommit the return and the parenthesis around the parameter.
 
 ``` javascript
 const dinnerMenu = food => `For dinner I will have ${food}`
@@ -260,7 +260,7 @@ leadSinger()
 // undefined is the lead singer of Cold Play
 ```
 
-To prevent this we can use default parameters
+To prevent this we can use default parameters.
 
 ``` javascript
 const leadSinger = (artist = "someone") => {
