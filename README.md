@@ -220,6 +220,35 @@ add(4, 5, 7, 8, 12)
 
 ### Arrow Functions
 
+``` javascript
+// function declaration
+function breakfastMenu() {
+  return "eggs and bacon"
+}
+
+// anonymous function
+const lunchMenu = function() {
+  return "burger and fries"
+}
+
+//arrow function
+const dinnerMenu = (food) => {
+  return `For dinner I will have ${food}`
+}
+
+console.log( dinnerMenu("grilled steak") )
+// For dinner I will have grilled steak
+```
+
+With arrow functions, if it only has one paramater and one thing to return:
+we can ommit the return and the parenthesis around the parameter
+
+``` javascript
+const dinnerMenu = food => `For dinner I will have ${food}`
+```
+<hr>
+
+### Default Params
 
 ``` javascript
 
