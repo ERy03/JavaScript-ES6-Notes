@@ -409,8 +409,10 @@ const buyFlightTicket = () => {
 }
 
 buyFlightTicket()
-.then( (success) => console.log(success)) // success -> resolve: "Thank you, your payment was successful"
-.catch( (error) => console.log(error)); // error -> reject: "Sorry your payment was not successful"
+.then( (success) => console.log(success)) // only runs when resolve
+// success -> "Thank you, your payment was successful"
+.catch( (error) => console.log(error)); // only runs when reject
+// error -> "Sorry your payment was not successful"
 
 // after 3 seconds => Thank you, your payment was successful
 ```
