@@ -155,7 +155,7 @@ contacts.push("John")
 console.log(personalFriends)
 // ["Mary", "Joel", "Danny"]
 ```
-We can also do this by using spread operators:
+We can also do the following by using spread operators:
 
 ``` javascript
 let contacts = ["Mary", "Joel", "Danny"];
@@ -185,13 +185,42 @@ console.log(employee)
 ```
 <hr>
 
-###
-``` javascript
+### Rest Operator
 
-```
-``` javascript
+Used when we don't know how many inputs there will be.
 
+``` javascript
+function add(nums) {
+  console.log(nums)
+}
+
+add(4, 5, 7, 8, 12)
+// 4
+
+// using arguments
+function add(nums) {
+  console.log(arguments)
+}
+
+add(4, 5, 7, 8, 12)
+// {0: 4, 1: 5, 2: 7, 3: 8, 4: 12}
 ```
+
+Instead of arguments we can use the rest operator which looks liks the spread operator.
+
+``` javascript
+function add(...nums) {
+  console.log(nums)
+}
+
+add(4, 5, 7, 8, 12)
+// [ 4, 5, 7, 8, 12 ]
+```
+<hr>
+
+### Arrow Functions
+
+
 ``` javascript
 
 ```
