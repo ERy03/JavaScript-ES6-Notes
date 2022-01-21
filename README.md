@@ -39,3 +39,56 @@ console.log(club) // LA Lakers
 console.log(city) // Los Angeles
 ```
 <hr>
+
+### Destructuring Arrays
+
+``` javascript
+let names = ['Dylan', 'Coding God', 'Israel'];
+console.log(names[0]) // Dylan
+```
+
+We can destructure the array like this:
+
+``` javascript
+let [firstName, middleName, lastName] = ['Dylan', 'Coding God', 'Israel'];
+console.log(firstName) // Dylan
+
+// We can override values
+firstName = 'Bob'
+console.log(firstName) // Bob
+```
+<hr>
+
+### Object Literals
+
+``` javascript
+function addressMaker(city, state) {
+  const newAddress = {city: city, state: state}
+
+  console.log(newAddress)
+}
+
+addressMaker('Austin', 'Texas')
+// {city: "Austin", state: "Texas"}
+```
+
+If the keys are the same as the values being passed we don't have to set them.
+With object literals:
+
+``` javascript
+function addressMaker(city, state) {
+  const newAddress = {city, state}
+
+  console.log(newAddress)
+}
+
+addressMaker('Austin', 'Texas')
+// {city: "Austin", state: "Texas"}
+```
+
+Object Literals prevents us from writing duplicate code. Less code but still descriptive.
+
+<hr>
+
+``` javascript
+```
