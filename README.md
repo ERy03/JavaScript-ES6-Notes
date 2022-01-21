@@ -120,7 +120,75 @@ for (const char of name) {
 ```
 <hr>
 
+### Spread Operator
 
+``` javascript
+let contacts = ["Mary", "Joel", "Danny"];
+let personalFriends = contacts; // copy of contacts
+
+console.log(personalFriends)
+// ["Mary", "Joel", "Danny"]
+
+contacts.push("John")
+console.log(contacts)
+// ["Mary", "Joel", "Danny", "John"]
+
+console.log(personalFriends)
+// ["Mary", "Joel", "Danny", "John"]
+```
+
+Why is `John` inside of my `personalFriends`?
+
+Because `personalFriends` acts as an reference type. In other words
+`let personalFriends = contacts` does not create a new array. Instead it's making a reference to `contacts`. So the changes we make in `contacts` will also affect `personalFriends`.
+
+Then how can we solve this?
+
+-> Spread Operators!
+
+``` javascript
+let contacts = ["Mary", "Joel", "Danny"];
+let personalFriends = [ ...contacts ];
+// spread operator followed by the name of the array we want to copy
+
+contacts.push("John")
+console.log(personalFriends)
+// ["Mary", "Joel", "Danny"]
+```
+We can also do this by using spread operators:
+
+``` javascript
+let contacts = ["Mary", "Joel", "Danny"];
+let personalFriends = [ "David", ...contacts, "Lily" ];
+
+console.log(personalFriends)
+// ["David", "Mary", "Joel", "Danny", "Lily"]
+```
+
+Spread operatos can also be used with objects.
+
+``` javascript
+let person = {
+    name: "Adam",
+    age: 25,
+    city: "Manchester"
+}
+
+let employee = {
+    ...person,
+    salary: 50000,
+    position: "Software Developer"
+}
+
+console.log(employee)
+// {name: "Adam", age: 25, city: "Manchester", salary: 50000, position: "Software Developer"}
+```
+<hr>
+
+###
+``` javascript
+
+```
 ``` javascript
 
 ```
