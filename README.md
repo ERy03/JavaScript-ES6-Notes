@@ -90,5 +90,46 @@ Object Literals prevents us from writing duplicate code. Less code but still des
 
 <hr>
 
+### For of Loop
+
+Can be used to iterate over iterables.
+
 ``` javascript
+let incomes = [62000, 67000, 75000]
+let total = 0
+
+for (const income of incomes) {
+  total += income
+}
+
+console.log(total) // 204000
+```
+
+``` javascript
+let name = "Dylan"
+
+for (const char of name) {
+  console.log(char)
+}
+
+// D
+// y
+// l
+// a
+// n
+```
+<hr>
+
+
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
 ```
