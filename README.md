@@ -392,6 +392,8 @@ console.log(cat.metaData) // Type: Cat, Legs: 4
 
 Used on network requests such as fetching from API or asynchronous functions. Prevents callback hell.
 
+https://www.youtube.com/watch?v=DHvZLI7Db8E&ab_channel=WebDevSimplified
+
 ``` javascript
 const buyFlightTicket = () => {
   return new Promise( (resolved, reject) => {
