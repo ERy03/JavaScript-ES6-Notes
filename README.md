@@ -390,7 +390,7 @@ console.log(cat.metaData) // Type: Cat, Legs: 4
 
 ### Promises
 
-Used on network requests such as fetching from API or asynchronous functions.
+Used on network requests such as fetching from API or asynchronous functions. Prevents callback hell.
 
 ``` javascript
 const buyFlightTicket = () => {
@@ -399,7 +399,7 @@ const buyFlightTicket = () => {
       const error = false;
 
       if(error) {
-          reject("Sorry your payment was not successful") {
+          reject("Sorry your payment was not successful")
         } else {
           resolve("Thank you, your payment was successful")
         }
