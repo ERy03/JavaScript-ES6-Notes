@@ -333,7 +333,58 @@ console.log(example.padStart(10, 'a'))
 ### Classes
 
 ``` javascript
+// animals.js
+export class Animal {
+  constructor(type, legs){ // constructor assigns values to the animal class
+    this.type = type;
+    this.legs = legs;
+  }
 
+  // we can create functions inside of classes
+  makeNoise(sound = 'Loud Noise') {
+    console.log(sound)
+  }
+
+  get metaData(){
+    return `Type: ${this.type}, Legs: ${this.legs}`
+  }
+
+  static return10(){
+    return 10;
+  }
+}
+
+// inheriting
+export class Cat extends Animal {
+  constructor(type, legs, tail) {
+    super(type, legs);
+    this.tail = tail;
+  }
+
+  makeNoise( sound = "meow") {
+    console.log(sound)
+  }
+}
+
+// index.js
+import { Animal } from './animals.js'
+
+console.log(Animal.return10()) // 10
+
+let cat = new Animal('Cat', 4);
+
+console.log(cat.type) // Cat
+console.log(cat.legs) // 4
+cat.makeNoise('Meow') // Meow
+console.log(cat.metaData) // Type: Cat, Legs: 4
+
+cat.legs = 3;
+
+console.log(cat.legs) // 3
+
+let cat = new Cat('cat', 4)
+cat.makeNoise() // meow
+console.log(cat.metaData) // Type: Cat, Legs: 4
 ```
 ``` javascript
 
