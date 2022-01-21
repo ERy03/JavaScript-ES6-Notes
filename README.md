@@ -251,11 +251,32 @@ const dinnerMenu = food => `For dinner I will have ${food}`
 ### Default Params
 
 ``` javascript
+const leadSinger = (artist) => {
+  console.log( `${artist} is the lead singer of Cold Play`)
+}
 
+// What happens when you don't provide arguments?
+leadSinger()
+// undefined is the lead singer of Cold Play
 ```
+
+To prevent this we can use default parameters
+
 ``` javascript
+const leadSinger = (artist = "someone") => {
+  console.log( `${artist} is the lead singer of Cold Play`)
+}
 
+leadSinger()
+// someone is the lead singer of Cold Play
+
+// What if we DO provide arguments?
+leadSinger("Chris Martin")
+// Chris Martin is the lead singer of Cold Play
 ```
+<hr>
+
+### Includes()
 ``` javascript
 
 ```
