@@ -292,4 +292,47 @@ console.log(numArray.indexOf(0))
 ```
 <hr>
 
-###
+### Import and Export
+
+``` javascript
+// example.js
+export const data = [1,2,3];
+
+// index.js
+import { data } from './example.js'
+console.log(data)
+// [1,2,3]
+```
+<hr>
+
+### 
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
+```
+``` javascript
+
+```
