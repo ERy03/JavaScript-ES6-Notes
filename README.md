@@ -277,6 +277,19 @@ leadSinger("Chris Martin")
 <hr>
 
 ### Includes()
-``` javascript
 
+returns true or false
+
+``` javascript
+let numArray = [1,2,3,4,5]
+
+console.log(numArray.includes(2))
+// true
+
+// without includes
+console.log(numArray.indexOf(0))
+// -1
 ```
+<hr>
+
+###
