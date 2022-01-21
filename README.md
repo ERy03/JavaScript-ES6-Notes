@@ -305,10 +305,33 @@ console.log(data)
 ```
 <hr>
 
-### 
-``` javascript
+### padStart() and padEnd()
 
+Adding values to the start and end of the string.
+
+``` javascript
+let example = "Dylan";
+
+console.log(example.padStart(10, 'a'))
+// aaaaaDylan
+console.log(example.padEnd(10, 'a'))
+// Dylanaaaaa
+console.log(example.padStart(100))
+// Dylan
+console.log(example.padStart(100).length)
+// 100
+console.log(example.padEnd(1))
+// Dylan
+
+let example = "Dylan Israel"
+
+console.log(example.padStart(10, 'a'))
+// Dylan Israel
 ```
+<hr>
+
+### Classes
+
 ``` javascript
 
 ```
