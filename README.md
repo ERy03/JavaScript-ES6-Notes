@@ -501,21 +501,54 @@ photoUpload()
 // Photo Uploaded
 // 1
 ```
-`Async` makes it asynchronous.
+`async` makes it asynchronous.
 `await` waits until promise is resolved
 
+Another example using fetch:
+
+``` javascript
+const apiUrl = "https://api.chucknorris.io/jokes/random";
+
+async function getJoke() {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    console.log(data.value);
+}
+
+getJoke();
+```
 <hr>
 
-###
-``` javascript
+### Sets
 
-```
 ``` javascript
+const exampleSet = new Set([1,1,1,1,1,2,2,2,2]);
 
-```
-``` javascript
+console.log(exampleSet)
+// Set(2) { 1, 2 }
 
-```
-``` javascript
+// Adding to Set
+exampleSet.add(5);
+// Set(3) { 1, 2, 5 }
+exampleSet.add(5);
+// Set(3) { 1, 2, 5 }
+exampleSet.add(5).add(17);
+// Set(4) { 1, 2, 5, 17 }
 
+// Deleting from Set
+exampleSet.delete(5)
+// true -> deletes and returns a boolean
+exampleSet
+// Set(3) { 1, 2, 17 }
+
+// Check if a value exists in Set
+exampleSet.has(1);
+// true
+
+// Clearing Set
+exampleSet.clear();
+// Set(0) {}
 ```
+
+Sets are iterable as well.
