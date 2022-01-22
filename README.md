@@ -430,9 +430,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 // GET request
 fetch('https://jsonplaceholder.typicode.com/comments/1')
   .then(response => response.json())
-  .then((data) => {
-    console.log(data)
-  })
+  .then((data) => console.log(data))
 // {postId: 1, id: 1, name: "id labore ex et quam laborum", email: "Eliseo@gardner.biz", body: "laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium"}
 
 // POST request
@@ -453,13 +451,62 @@ fetch('https://jsonplaceholder.typicode.com/comments', {
 ```
 <hr>
 
+### Async and Await
+
+Example without Async and Await.
+
+``` javascript
+const photos = [];
+
+function photoUpload() {
+  let uploadStatus = new Promise( (resolve, reject ) => {
+      setTimeout( () => {
+        photos.push("Profile Pic");
+        resolve("Photo Uploaded")
+      }, 3000)
+  })
+
+  let result = uploadStatus;
+
+  console.log(result);
+  console.log(photos.length);
+}
+photoUpload()
+// Promise
+// 0
+```
+
+Why is it logging `Promise` and `0`?
+Because Javascript runs synchronousely. In this case it's not waiting 3 seconds so the promise is not resolved.
+
+Instead we can:
+
+``` javascript
+const photos = [];
+
+async function photoUpload() {
+  let uploadStatus = new Promise( (resolve, reject ) => {
+      setTimeout( () => {
+        photos.push("Profile Pic");
+        resolve("Photo Uploaded")
+      }, 3000)
+  })
+
+  let result = await uploadStatus;
+
+  console.log(result);
+  console.log(photos.length);
+}
+photoUpload()
+// Photo Uploaded
+// 1
+```
+`Async` makes it asynchronous.
+`await` waits until promise is resolved
+
+<hr>
+
 ###
-``` javascript
-
-```
-``` javascript
-
-```
 ``` javascript
 
 ```
