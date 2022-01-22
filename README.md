@@ -1,5 +1,7 @@
 # JavaScript ES6
 
+## Table of Contents
+
 ### Destructing Objects
 
 Break down object in the following manner:
