@@ -396,7 +396,7 @@ https://www.youtube.com/watch?v=DHvZLI7Db8E&ab_channel=WebDevSimplified
 
 ``` javascript
 const buyFlightTicket = () => {
-  return new Promise( (resolved, reject) => {
+  return new Promise( (resolve, reject) => {
     setTimeout( () => {
       const error = false;
 
@@ -420,10 +420,40 @@ buyFlightTicket()
 ```
 <hr>
 
-###
-``` javascript
+### Fetch
 
+Used for API calls. Returns a promise.
+
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+``` javascript
+// GET request
+fetch('https://jsonplaceholder.typicode.com/comments/1')
+  .then(response => response.json())
+  .then((data) => {
+    console.log(data)
+  })
+// {postId: 1, id: 1, name: "id labore ex et quam laborum", email: "Eliseo@gardner.biz", body: "laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium"}
+
+// POST request
+fetch('https://jsonplaceholder.typicode.com/comments', {
+  method: "POST",
+  body: JSON.stringify({
+    postID: 1,
+    name: 'Dylan',
+    email: 'dylanblahblah2022@gmail.com',
+    body: 'Cool!'
+  })
+})
+  .then(response => response.json())
+  .then((data) => {
+    console.log(data)
+  })
+// {id: 501}
 ```
+<hr>
+
+###
 ``` javascript
 
 ```
